@@ -47,4 +47,36 @@ document.addEventListener("DOMContentLoaded", function () {
       minutes = "0" + minutes;
     }
   }
+
+  let x = 20;
+  x += 5;
+  console.log(x);
+
+  let y = 10;
+  y %= 3;
+  console.log(y);
+
+  let a;
+  console.log("This is undefined: " + a);
+
+  let favFood = "pizza";
+  let favColour = "pink";
+  let favDrink = "cola";
+  let drinkNum = 5;
+
+  console.log(
+    "I like to eat " +
+      favFood +
+      " and drink " +
+      drinkNum +
+      " bottles of " +
+      favDrink +
+      " whilst wearing a " +
+      favColour +
+      " bib."
+  );
+
+  console.log(
+    `I like to eat ${favFood} and drink ${drinkNum} bottles of ${favDrink} whilst wearing a ${favColour} bib.`
+  );
 });
