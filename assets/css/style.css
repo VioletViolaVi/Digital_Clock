@@ -95,9 +95,11 @@ body {
   #alarmScreen #time,
   #alarmScreen #month,
   #alarmScreen #monthDate,
-  #alarmScreen #weekday,
-  #alarmScreen #seconds {
+  #alarmScreen #weekday {
     font-size: 1.9em;
+  }
+  #alarmScreen #seconds {
+    font-size: 1.4em;
   }
   #rightHolder {
     margin: auto;
@@ -130,9 +132,11 @@ body {
   #alarmScreen #time,
   #alarmScreen #month,
   #alarmScreen #monthDate,
-  #alarmScreen #weekday,
-  #alarmScreen #seconds {
+  #alarmScreen #weekday {
     font-size: 2.6em;
+  }
+  #alarmScreen #seconds {
+    font-size: 2em;
   }
   #rightHolder #innerTopRightHolder #monthTitle,
   #rightHolder #innerTopRightHolder #monthDateTitle {
@@ -161,9 +165,11 @@ body {
   #alarmScreen #time,
   #alarmScreen #month,
   #alarmScreen #monthDate,
-  #alarmScreen #weekday,
-  #alarmScreen #seconds {
+  #alarmScreen #weekday {
     font-size: 3.5em;
+  }
+  #alarmScreen #seconds {
+    font-size: 3em;
   }
   #rightHolder #innerTopRightHolder #month {
     border-right: black solid 0.03em;
@@ -193,9 +199,11 @@ body {
   #alarmScreen #time,
   #alarmScreen #month,
   #alarmScreen #monthDate,
-  #alarmScreen #weekday,
-  #alarmScreen #seconds {
+  #alarmScreen #weekday {
     font-size: 4.9em;
+  }
+  #alarmScreen #seconds {
+    font-size: 4em;
   }
   #rightHolder #innerTopRightHolder #monthTitle,
   #rightHolder #innerTopRightHolder #monthDateTitle {
