@@ -1,22 +1,34 @@
 $mainFont: "Roboto Mono", monospace;
-$centeredText: center;
+$alarmFontSize: 1.9em;
+$lineDividers: black solid 0.1em;
+$lineDividersMargin: 0.1em;
 
 $universalCSS: (
   "zeroEM": 0em,
   "borderBox": border-box,
 );
-$allColours: (
-  "bgColour": lightgrey,
-  "containerColour": green,
-  "screenColour": lightgreen,
-);
-$allPadding: (
-  "containerPadding": 1em,
-  "screenPadding": 2em,
-);
 $allGrids: (
   "gridDisplay": grid,
   "gridColumns": auto auto,
+  "centeredScreenContent": center,
+);
+$allBgColours: (
+  "mainBGColour": lightgrey,
+  "containerColour": green,
+  "screenColour": lightgreen,
+);
+$allBorderRadius: (
+  "containerBorderRadius": 2em,
+  "screenBorderRadius": 1em,
+);
+$allPadding: (
+  "containerPadding": 1em,
+  "screenPadding": 1em,
+);
+$allCentering: (
+  "centeredText": center,
+  "centerTime": auto 0.2em auto 0em,
+  "centeringAlarmW/Margin": 0em 0.5em,
 );
 
 * {
@@ -26,40 +38,47 @@ $allGrids: (
 }
 
 body {
-  background-color: map-get($allColours, "bgColour");
+  background-color: map-get($allBgColours, "mainBGColour");
   font-family: $mainFont;
-  text-align: $centeredText;
+  text-align: map-get($allCentering, "centeredText");
 }
 
 #alarmContainer {
-  background-color: map-get($allColours, "containerColour");
+  background-color: map-get($allBgColours, "containerColour");
   padding: map-get($allPadding, "containerPadding");
+  border-radius: map-get($allBorderRadius, "containerBorderRadius");
+  margin: map-get($allCentering, "centeringAlarmW/Margin");
 }
 
 #alarmScreen {
-  background-color: map-get($allColours, "screenColour");
+  background-color: map-get($allBgColours, "screenColour");
   padding: map-get($allPadding, "screenPadding");
+  display: map-get($allGrids, "gridDisplay");
+  grid-template-columns: map-get($allGrids, "gridColumns");
+  justify-content: map-get($allGrids, "centeredScreenContent");
+  border-radius: map-get($allBorderRadius, "screenBorderRadius");
+  font-size: $alarmFontSize;
+}
+
+#leftHolder {
+  margin: map-get($allCentering, "centerTime");
+}
+
+#innerTopRightHolder {
   display: map-get($allGrids, "gridDisplay");
   grid-template-columns: map-get($allGrids, "gridColumns");
 }
 
-
-
-
-#innerTopRightHolder {
-    display: map-get($allGrids, "gridDisplay");
-    grid-template-columns: map-get($allGrids, "gridColumns");
-}
-#leftHolder {
-  border: solid 0.3em blue;
-  margin: auto;
-}
 #rightHolder {
-  border-left: orchid solid 0.5em;
+  border-left: $lineDividers;
 }
+
 #innerTopRightHolder {
-  border-bottom: yellow solid 0.5em;
+  border-bottom: $lineDividers;
+  margin-left: $lineDividersMargin;
 }
+
 #month {
-  border-right: solid 0.3em pink;
+  border-right: $lineDividers;
+  margin-bottom: $lineDividersMargin;
 }
