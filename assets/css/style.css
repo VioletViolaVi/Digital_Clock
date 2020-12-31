@@ -102,7 +102,14 @@ body {
   #rightHolder {
     margin: auto;
   }
-  #month {
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    font-size: 0.8em;
+    position: absolute;
+    top: 10.2em;
+    margin-left: 1.5em;
+  }
+  #rightHolder #innerTopRightHolder #month {
     border-right: black solid 0.06em;
   }
 }
@@ -127,7 +134,13 @@ body {
   #alarmScreen #seconds {
     font-size: 2.6em;
   }
-  #month {
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    font-size: 1em;
+    top: 8.9em;
+    margin-left: 1.8em;
+  }
+  #rightHolder #innerTopRightHolder #month {
     border-right: black solid 0.05em;
   }
 }
@@ -152,6 +165,15 @@ body {
   #alarmScreen #seconds {
     font-size: 3.5em;
   }
+  #rightHolder #innerTopRightHolder #month {
+    border-right: black solid 0.03em;
+  }
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    font-size: 1.5em;
+    top: 4.5em;
+    margin-left: 1.8em;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -175,8 +197,11 @@ body {
   #alarmScreen #seconds {
     font-size: 4.9em;
   }
-  #month {
-    border-right: black solid 0.03em;
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    font-size: 1.6em;
+    top: 3em;
+    margin-left: 2.7em;
   }
 }
 /*# sourceMappingURL=style.css.map */

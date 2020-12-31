@@ -1,6 +1,5 @@
 $mainFont: "Roboto Mono", monospace;
 $titleMarginTop: 2em;
-$alarmFontSize: 1.9em;
 $containerWidth: 93%;
 $alarmShadow: 0.4em 0.8em;
 $secondsAlign: right;
@@ -33,6 +32,10 @@ $allCentering: (
   "centeredText": center,
   "centerTime": auto 0.2em auto 0em,
   "centeringAlarmW/Margin": 8em 0.5em,
+);
+$allFontSizes: (
+  "alarmFontSize": 1.9em,
+  "subTitle": 0.5em,
 );
 $allDividers: (
   "lineDividers": black solid 0.1em,
@@ -79,7 +82,7 @@ body {
   grid-template-columns: map-get($allGrids, "gridColumns");
   justify-content: map-get($allGrids, "centeredScreenContent");
   border-radius: map-get($allBorderRadius, "screenBorderRadius");
-  font-size: $alarmFontSize;
+  font-size: map-get($allFontSizes, "alarmFontSize");
 }
 
 // time & secs
@@ -106,7 +109,7 @@ body {
     // alarm screen titles
     #monthTitle,
     #monthDateTitle {
-      font-size: 0.5em;
+      font-size: map-get($allFontSizes, "subTitle");
     }
 
     // month ONLY
@@ -153,6 +156,14 @@ body {
     margin: auto;
   }
 
+  // alarm screen titles
+  @mixin monthTitleAndMonthDateTitle {
+    font-size: 0.8em;
+    position: absolute;
+    top: 10.2em;
+    margin-left: 1.5em;
+  }
+
   // month border
   @mixin month {
     border-right: black solid 0.06em;
@@ -175,11 +186,18 @@ body {
     @include rightHolder;
   }
 
+  // alarm screen titles
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    @include monthTitleAndMonthDateTitle;
+  }
+
   // month border
-  #month {
+  #rightHolder #innerTopRightHolder #month {
     @include month;
   }
 }
+
 @media (min-width: map-get($allBreakPoints, "768px")) {
   @mixin title {
     margin-top: 0.5em;
@@ -203,6 +221,13 @@ body {
     }
   }
 
+  // alarm screen titles
+  @mixin monthTitleAndMonthDateTitle {
+    font-size: 1em;
+    top: 8.9em;
+    margin-left: 1.8em;
+  }
+
   // month border
   @mixin month {
     border-right: black solid 0.05em;
@@ -220,11 +245,18 @@ body {
     @include alarmScreen;
   }
 
+  // alarm screen titles
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    @include monthTitleAndMonthDateTitle;
+  }
+
   // month border
-  #month {
+  #rightHolder #innerTopRightHolder #month {
     @include month;
   }
 }
+
 @media (min-width: map-get($allBreakPoints, "992px")) {
   @mixin title {
     font-size: 5.5em;
@@ -248,6 +280,18 @@ body {
     }
   }
 
+  // month border
+  @mixin month {
+    border-right: black solid 0.03em;
+  }
+
+  // alarm screen titles
+  @mixin monthTitleAndMonthDateTitle {
+    font-size: 1.5em;
+    top: 4.5em;
+    margin-left: 1.8em;
+  }
+
   #title {
     @include title;
   }
@@ -259,7 +303,19 @@ body {
   #alarmScreen {
     @include alarmScreen;
   }
+
+  // month border
+  #rightHolder #innerTopRightHolder #month {
+    @include month;
+  }
+
+  // alarm screen titles
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    @include monthTitleAndMonthDateTitle;
+  }
 }
+
 @media (min-width: map-get($allBreakPoints, "1366px")) {
   @mixin title {
     font-size: 6em;
@@ -284,9 +340,11 @@ body {
     }
   }
 
-  // month border
-  @mixin month {
-    border-right: black solid 0.03em;
+  // alarm screen titles
+  @mixin monthTitleAndMonthDateTitle {
+    font-size: 1.6em;
+    top: 3em;
+    margin-left: 2.7em;
   }
 
   #title {
@@ -301,8 +359,9 @@ body {
     @include alarmScreen;
   }
 
-  // month border
-  #month {
-    @include month;
+  // alarm screen titles
+  #rightHolder #innerTopRightHolder #monthTitle,
+  #rightHolder #innerTopRightHolder #monthDateTitle {
+    @include monthTitleAndMonthDateTitle;
   }
 }
