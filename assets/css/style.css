@@ -2,7 +2,7 @@
   margin: 0em;
   padding: 0em;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   cursor: default;
 }
 
@@ -23,7 +23,7 @@ body {
   margin: 8em 0.5em;
   width: 93%;
   -webkit-box-shadow: 0.4em 0.8em;
-          box-shadow: 0.4em 0.8em;
+  box-shadow: 0.4em 0.8em;
 }
 
 #alarmScreen {
@@ -32,49 +32,43 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 1em;
   font-size: 1.9em;
 }
 
-/* time */
 #leftHolder {
   margin: auto 0.2em auto 0em;
 }
 
-/* month, month date and day */
 #rightHolder {
   border-left: black solid 0.1em;
 }
 
-/* month and month date ONLY */
 #innerTopRightHolder {
   border-bottom: black solid 0.1em;
   margin-left: 0.1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
 }
 
-/* month ONLY */
 #month {
   border-right: black solid 0.1em;
   margin-bottom: 0.1em;
 }
 
-/* day ONLY */
 #weekday {
   margin-left: 0.1em;
 }
 
 /******************************************************************* breakpoints */
+
 @media (min-width: 576px) {
-  /* month, month date and day */
-  /* month border */
   #title {
     margin-top: 1em;
     font-size: 3em;
@@ -89,24 +83,18 @@ body {
     height: 7em;
     padding-right: 1em;
   }
-  #alarmScreen #time,
-  #alarmScreen #month,
-  #alarmScreen #monthDate,
-  #alarmScreen #weekday {
+  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
     font-size: 1.9em;
   }
-  /* month, month date and day */
   #rightHolder {
     margin: auto;
   }
-  /* month border */
   #month {
     border-right: black solid 0.06em;
   }
 }
 
 @media (min-width: 768px) {
-  /* month border */
   #title {
     margin-top: 0.5em;
     font-size: 4.5em;
@@ -119,13 +107,9 @@ body {
     width: 22.6em;
     height: 9em;
   }
-  #alarmScreen #time,
-  #alarmScreen #month,
-  #alarmScreen #monthDate,
-  #alarmScreen #weekday {
+  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
     font-size: 2.6em;
   }
-  /* month border */
   #month {
     border-right: black solid 0.05em;
   }
@@ -144,16 +128,12 @@ body {
     width: 30.6em;
     height: 12.7em;
   }
-  #alarmScreen #time,
-  #alarmScreen #month,
-  #alarmScreen #monthDate,
-  #alarmScreen #weekday {
+  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
     font-size: 3.5em;
   }
 }
 
 @media (min-width: 1366px) {
-  /* month border */
   #title {
     font-size: 6em;
     margin-top: 0em;
@@ -167,15 +147,12 @@ body {
     width: 42.6em;
     height: 16em;
   }
-  #alarmScreen #time,
-  #alarmScreen #month,
-  #alarmScreen #monthDate,
-  #alarmScreen #weekday {
+  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
     font-size: 4.9em;
   }
-  /* month border */
   #month {
     border-right: black solid 0.03em;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

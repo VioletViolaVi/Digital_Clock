@@ -37,10 +37,10 @@ $allDividers: (
   "lineDividersMargin": 0.1em,
 );
 $allBreakPoints: (
-  "largerMobile": 576px,
-  "tablet": 768px,
-  "largerTablet": 992px,
-  "desktop": 1366px,
+  "576px": 576px,
+  "768px": 768px,
+  "992px": 992px,
+  "1366px": 1366px,
 );
 
 * {
@@ -79,17 +79,17 @@ body {
   font-size: $alarmFontSize;
 }
 
-/* time */
+// time
 #leftHolder {
   margin: map-get($allCentering, "centerTime");
 }
 
-/* month, month date and day */
+// month, month date and day
 #rightHolder {
   border-left: map-get($allDividers, "lineDividers");
 }
 
-/* month and month date ONLY */
+// month and month date ONLY
 #innerTopRightHolder {
   border-bottom: map-get($allDividers, "lineDividers");
   margin-left: map-get($allDividers, "lineDividersMargin");
@@ -97,19 +97,19 @@ body {
   grid-template-columns: map-get($allGrids, "gridColumns");
 }
 
-/* month ONLY */
+// month ONLY
 #month {
   border-right: map-get($allDividers, "lineDividers");
   margin-bottom: map-get($allDividers, "lineDividersMargin");
 }
 
-/* day ONLY */
+// day ONLY
 #weekday {
   margin-left: map-get($allDividers, "lineDividersMargin");
 }
 
 /******************************************************************* breakpoints */
-@media (min-width: map-get($allBreakPoints, "largerMobile")) {
+@media (min-width: map-get($allBreakPoints, "576px")) {
   @mixin title {
     margin-top: 1em;
     font-size: 3em;
@@ -133,12 +133,12 @@ body {
     }
   }
 
-  /* month, month date and day */
+  // month, month date and day
   @mixin rightHolder {
     margin: auto;
   }
 
-  /* month border */
+  // month border
   @mixin month {
     border-right: black solid 0.06em;
   }
@@ -155,17 +155,17 @@ body {
     @include alarmScreen;
   }
 
-  /* month, month date and day */
+  // month, month date and day
   #rightHolder {
     @include rightHolder;
   }
 
-  /* month border */
+  // month border
   #month {
     @include month;
   }
 }
-@media (min-width: map-get($allBreakPoints, "tablet")) {
+@media (min-width: map-get($allBreakPoints, "768px")) {
   @mixin title {
     margin-top: 0.5em;
     font-size: 4.5em;
@@ -187,7 +187,7 @@ body {
     }
   }
 
-  /* month border */
+  // month border
   @mixin month {
     border-right: black solid 0.05em;
   }
@@ -204,12 +204,12 @@ body {
     @include alarmScreen;
   }
 
-  /* month border */
+  // month border
   #month {
     @include month;
   }
 }
-@media (min-width: map-get($allBreakPoints, "largerTablet")) {
+@media (min-width: map-get($allBreakPoints, "992px")) {
   @mixin title {
     font-size: 5.5em;
   }
@@ -243,7 +243,7 @@ body {
     @include alarmScreen;
   }
 }
-@media (min-width: map-get($allBreakPoints, "desktop")) {
+@media (min-width: map-get($allBreakPoints, "1366px")) {
   @mixin title {
     font-size: 6em;
     margin-top: 0em;
@@ -266,7 +266,7 @@ body {
     }
   }
 
-  /* month border */
+  // month border
   @mixin month {
     border-right: black solid 0.03em;
   }
@@ -283,7 +283,7 @@ body {
     @include alarmScreen;
   }
 
-  /* month border */
+  // month border
   #month {
     @include month;
   }
