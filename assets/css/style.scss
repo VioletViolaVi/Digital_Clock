@@ -1,7 +1,5 @@
 $mainFont: "Roboto Mono", monospace;
 $alarmFontSize: 1.9em;
-$lineDividers: black solid 0.1em;
-$lineDividersMargin: 0.1em;
 
 $universalCSS: (
   "zeroEM": 0em,
@@ -22,13 +20,17 @@ $allBorderRadius: (
   "screenBorderRadius": 1em,
 );
 $allPadding: (
-  "containerPadding": 1em,
-  "screenPadding": 1em,
+  "containerPadding": 0.5em,
+  "screenPadding": 0.8em,
 );
 $allCentering: (
   "centeredText": center,
   "centerTime": auto 0.2em auto 0em,
   "centeringAlarmW/Margin": 0em 0.5em,
+);
+$allDividers: (
+  "lineDividers": black solid 0.1em,
+  "lineDividersMargin": 0.1em,
 );
 
 * {
@@ -70,15 +72,19 @@ body {
 }
 
 #rightHolder {
-  border-left: $lineDividers;
+  border-left: map-get($allDividers, "lineDividers");
 }
 
 #innerTopRightHolder {
-  border-bottom: $lineDividers;
-  margin-left: $lineDividersMargin;
+  border-bottom: map-get($allDividers, "lineDividers");
+  margin-left: map-get($allDividers, "lineDividersMargin");
 }
 
 #month {
-  border-right: $lineDividers;
-  margin-bottom: $lineDividersMargin;
+  border-right: map-get($allDividers, "lineDividers");
+  margin-bottom: map-get($allDividers, "lineDividersMargin");
+}
+
+#weekday {
+  margin-left: map-get($allDividers, "lineDividersMargin");
 }
