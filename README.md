@@ -66,7 +66,7 @@ This project is a 24-hour digital clock that displays the current time when open
   - JavaScript was used in this project to provide the logic of the clock and enable DOM manipulation so the time, date and day would be changed.
 - [Google Fonts: "Roboto Mono"](https://fonts.google.com/specimen/Roboto+Mono?sidebar.open=true&selection.family=Roboto+Mono)
   - The "Roboto Mono" from Google Fonts was used to change the font style so it resembled the look of a standard digital clock.
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools))
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
   - Chrome DevTools was used to debug errors with the JavaScript code using "**_console.log()_**", in the "**_Console_**" tab.
   - Chrome DevTools was used to check the Responsiveness of the digital clock across different screen sizes.
   - Chrome DevTools was used to ensure the correct data was being appended to the HTML file using the "**_Elements_**" tab.
