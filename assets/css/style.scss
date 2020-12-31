@@ -1,9 +1,12 @@
 $mainFont: "Roboto Mono", monospace;
+$titleMarginTop: 2em;
 $alarmFontSize: 1.9em;
+$alarmShadow: 0.4em 0.8em;
 
 $universalCSS: (
   "zeroEM": 0em,
   "borderBox": border-box,
+  "cursorType": default,
 );
 $allGrids: (
   "gridDisplay": grid,
@@ -11,9 +14,9 @@ $allGrids: (
   "centeredScreenContent": center,
 );
 $allBgColours: (
-  "mainBGColour": lightgrey,
-  "containerColour": green,
-  "screenColour": lightgreen,
+  "mainBGColour": lightblue,
+  "containerColour": white,
+  "screenColour": lightgrey,
 );
 $allBorderRadius: (
   "containerBorderRadius": 2em,
@@ -26,7 +29,7 @@ $allPadding: (
 $allCentering: (
   "centeredText": center,
   "centerTime": auto 0.2em auto 0em,
-  "centeringAlarmW/Margin": 0em 0.5em,
+  "centeringAlarmW/Margin": 8em 0.5em,
 );
 $allDividers: (
   "lineDividers": black solid 0.1em,
@@ -37,6 +40,7 @@ $allDividers: (
   margin: map-get($universalCSS, "zeroEM");
   padding: map-get($universalCSS, "zeroEM");
   box-sizing: map-get($universalCSS, "borderBox");
+  cursor: map-get($universalCSS, "cursorType");
 }
 
 body {
@@ -45,11 +49,16 @@ body {
   text-align: map-get($allCentering, "centeredText");
 }
 
+#title {
+  margin-top: $titleMarginTop;
+}
+
 #alarmContainer {
   background-color: map-get($allBgColours, "containerColour");
   padding: map-get($allPadding, "containerPadding");
   border-radius: map-get($allBorderRadius, "containerBorderRadius");
   margin: map-get($allCentering, "centeringAlarmW/Margin");
+  box-shadow: $alarmShadow;
 }
 
 #alarmScreen {

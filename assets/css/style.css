@@ -3,23 +3,30 @@
   padding: 0em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: default;
 }
 
 body {
-  background-color: lightgrey;
+  background-color: lightblue;
   font-family: "Roboto Mono", monospace;
   text-align: center;
 }
 
+#title {
+  margin-top: 2em;
+}
+
 #alarmContainer {
-  background-color: green;
+  background-color: white;
   padding: 0.5em;
   border-radius: 2em;
-  margin: 0em 0.5em;
+  margin: 8em 0.5em;
+  -webkit-box-shadow: 0.4em 0.8em;
+          box-shadow: 0.4em 0.8em;
 }
 
 #alarmScreen {
-  background-color: lightgreen;
+  background-color: lightgrey;
   padding: 0.8em;
   display: -ms-grid;
   display: grid;
