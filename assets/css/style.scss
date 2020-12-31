@@ -1,6 +1,7 @@
 $mainFont: "Roboto Mono", monospace;
 $titleMarginTop: 2em;
 $alarmFontSize: 1.9em;
+$containerWidth: 93%;
 $alarmShadow: 0.4em 0.8em;
 
 $universalCSS: (
@@ -35,6 +36,12 @@ $allDividers: (
   "lineDividers": black solid 0.1em,
   "lineDividersMargin": 0.1em,
 );
+$allBreakPoints: (
+  "largerMobile": 576px,
+  "tablet": 768px,
+  "largerTablet": 992px,
+  "desktop": 1366px,
+);
 
 * {
   margin: map-get($universalCSS, "zeroEM");
@@ -58,6 +65,7 @@ body {
   padding: map-get($allPadding, "containerPadding");
   border-radius: map-get($allBorderRadius, "containerBorderRadius");
   margin: map-get($allCentering, "centeringAlarmW/Margin");
+  width: $containerWidth;
   box-shadow: $alarmShadow;
 }
 
@@ -71,29 +79,96 @@ body {
   font-size: $alarmFontSize;
 }
 
+/* time */
 #leftHolder {
   margin: map-get($allCentering, "centerTime");
 }
 
-#innerTopRightHolder {
-  display: map-get($allGrids, "gridDisplay");
-  grid-template-columns: map-get($allGrids, "gridColumns");
-}
-
+/* month, month date and day */
 #rightHolder {
   border-left: map-get($allDividers, "lineDividers");
 }
 
+/* month and month date ONLY */
 #innerTopRightHolder {
   border-bottom: map-get($allDividers, "lineDividers");
   margin-left: map-get($allDividers, "lineDividersMargin");
+  display: map-get($allGrids, "gridDisplay");
+  grid-template-columns: map-get($allGrids, "gridColumns");
 }
 
+/* month ONLY */
 #month {
   border-right: map-get($allDividers, "lineDividers");
   margin-bottom: map-get($allDividers, "lineDividersMargin");
 }
 
+/* day ONLY */
 #weekday {
   margin-left: map-get($allDividers, "lineDividersMargin");
+}
+
+/* bootstrap breakpoints */
+@media (min-width: map-get($allBreakPoints, "largerMobile")) {
+  @mixin title {
+    margin-top: 1em;
+    font-size: 3em;
+  }
+
+  @mixin alarmContainer {
+    margin: 5em auto 0em;
+    width: 32em;
+    height: 20em;
+  }
+
+  @mixin alarmScreen {
+    width: 16.3em;
+    height: 10em;
+    #time,
+    #month,
+    #monthDate,
+    #weekday {
+      font-size: 1.9em;
+    }
+  }
+
+  /* month, month date and day */
+  @mixin rightHolder {
+    margin: auto;
+  }
+
+  #title {
+    @include title;
+  }
+
+  #alarmContainer {
+    @include alarmContainer;
+  }
+
+  #alarmScreen {
+    @include alarmScreen;
+  }
+
+  /* month, month date and day */
+  #rightHolder {
+    @include rightHolder;
+  }
+}
+@media (min-width: map-get($allBreakPoints, "tablet")) {
+    
+
+
+
+
+
+
+
+
+
+
+}
+@media (min-width: map-get($allBreakPoints, "largerTablet")) {
+}
+/* custom breakpoint */
+@media (min-width: map-get($allBreakPoints, "desktop")) {
 }

@@ -21,6 +21,7 @@ body {
   padding: 0.5em;
   border-radius: 2em;
   margin: 8em 0.5em;
+  width: 93%;
   -webkit-box-shadow: 0.4em 0.8em;
           box-shadow: 0.4em 0.8em;
 }
@@ -39,32 +40,64 @@ body {
   font-size: 1.9em;
 }
 
+/* time */
 #leftHolder {
   margin: auto 0.2em auto 0em;
 }
 
+/* month, month date and day */
+#rightHolder {
+  border-left: black solid 0.1em;
+}
+
+/* month and month date ONLY */
 #innerTopRightHolder {
+  border-bottom: black solid 0.1em;
+  margin-left: 0.1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
 }
 
-#rightHolder {
-  border-left: black solid 0.1em;
-}
-
-#innerTopRightHolder {
-  border-bottom: black solid 0.1em;
-  margin-left: 0.1em;
-}
-
+/* month ONLY */
 #month {
   border-right: black solid 0.1em;
   margin-bottom: 0.1em;
 }
 
+/* day ONLY */
 #weekday {
   margin-left: 0.1em;
 }
+
+/* bootstrap breakpoints */
+@media (min-width: 576px) {
+  /* month, month date and day */
+  #title {
+    margin-top: 1em;
+    font-size: 3em;
+  }
+  #alarmContainer {
+    margin: 5em auto 0em;
+    width: 32em;
+    height: 20em;
+  }
+  #alarmScreen {
+    width: 16.3em;
+    height: 10em;
+  }
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday {
+    font-size: 1.9em;
+  }
+  /* month, month date and day */
+  #rightHolder {
+    margin: auto;
+  }
+}
+
+/* custom breakpoint */
 /*# sourceMappingURL=style.css.map */
