@@ -2,7 +2,8 @@
   margin: 0em;
   padding: 0em;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
   cursor: default;
 }
 
@@ -23,7 +24,7 @@ body {
   margin: 8em 0.5em;
   width: 93%;
   -webkit-box-shadow: 0.4em 0.8em;
-  box-shadow: 0.4em 0.8em;
+          box-shadow: 0.4em 0.8em;
 }
 
 #alarmScreen {
@@ -32,10 +33,10 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+      grid-template-columns: auto auto;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 1em;
   font-size: 1.9em;
 }
@@ -44,30 +45,38 @@ body {
   margin: auto 0.2em auto 0em;
 }
 
+#leftHolder #seconds {
+  text-align: right;
+}
+
 #rightHolder {
   border-left: black solid 0.1em;
 }
 
-#innerTopRightHolder {
+#rightHolder #innerTopRightHolder {
   border-bottom: black solid 0.1em;
   margin-left: 0.1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 
-#month {
+#rightHolder #innerTopRightHolder #monthTitle,
+#rightHolder #innerTopRightHolder #monthDateTitle {
+  font-size: 0.5em;
+}
+
+#rightHolder #innerTopRightHolder #month {
   border-right: black solid 0.1em;
   margin-bottom: 0.1em;
 }
 
-#weekday {
+#rightHolder #weekday {
   margin-left: 0.1em;
 }
 
 /******************************************************************* breakpoints */
-
 @media (min-width: 576px) {
   #title {
     margin-top: 1em;
@@ -83,7 +92,11 @@ body {
     height: 7em;
     padding-right: 1em;
   }
-  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday,
+  #alarmScreen #seconds {
     font-size: 1.9em;
   }
   #rightHolder {
@@ -107,7 +120,11 @@ body {
     width: 22.6em;
     height: 9em;
   }
-  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday,
+  #alarmScreen #seconds {
     font-size: 2.6em;
   }
   #month {
@@ -128,7 +145,11 @@ body {
     width: 30.6em;
     height: 12.7em;
   }
-  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday,
+  #alarmScreen #seconds {
     font-size: 3.5em;
   }
 }
@@ -147,12 +168,15 @@ body {
     width: 42.6em;
     height: 16em;
   }
-  #alarmScreen #time, #alarmScreen #month, #alarmScreen #monthDate, #alarmScreen #weekday {
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday,
+  #alarmScreen #seconds {
     font-size: 4.9em;
   }
   #month {
     border-right: black solid 0.03em;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

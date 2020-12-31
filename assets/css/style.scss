@@ -3,11 +3,13 @@ $titleMarginTop: 2em;
 $alarmFontSize: 1.9em;
 $containerWidth: 93%;
 $alarmShadow: 0.4em 0.8em;
+$secondsAlign: right;
 
 $universalCSS: (
   "zeroEM": 0em,
   "borderBox": border-box,
   "cursorType": default,
+  "removeBulletPoints": none,
 );
 $allGrids: (
   "gridDisplay": grid,
@@ -47,6 +49,7 @@ $allBreakPoints: (
   margin: map-get($universalCSS, "zeroEM");
   padding: map-get($universalCSS, "zeroEM");
   box-sizing: map-get($universalCSS, "borderBox");
+  list-style: map-get($universalCSS, "removeBulletPoints");
   cursor: map-get($universalCSS, "cursorType");
 }
 
@@ -79,33 +82,44 @@ body {
   font-size: $alarmFontSize;
 }
 
-// time
+// time & secs
 #leftHolder {
   margin: map-get($allCentering, "centerTime");
+
+  // seconds ONLY
+  #seconds {
+    text-align: $secondsAlign;
+  }
 }
 
 // month, month date and day
 #rightHolder {
   border-left: map-get($allDividers, "lineDividers");
-}
 
-// month and month date ONLY
-#innerTopRightHolder {
-  border-bottom: map-get($allDividers, "lineDividers");
-  margin-left: map-get($allDividers, "lineDividersMargin");
-  display: map-get($allGrids, "gridDisplay");
-  grid-template-columns: map-get($allGrids, "gridColumns");
-}
+  // month and month date ONLY
+  #innerTopRightHolder {
+    border-bottom: map-get($allDividers, "lineDividers");
+    margin-left: map-get($allDividers, "lineDividersMargin");
+    display: map-get($allGrids, "gridDisplay");
+    grid-template-columns: map-get($allGrids, "gridColumns");
 
-// month ONLY
-#month {
-  border-right: map-get($allDividers, "lineDividers");
-  margin-bottom: map-get($allDividers, "lineDividersMargin");
-}
+    // alarm screen titles
+    #monthTitle,
+    #monthDateTitle {
+      font-size: 0.5em;
+    }
 
-// day ONLY
-#weekday {
-  margin-left: map-get($allDividers, "lineDividersMargin");
+    // month ONLY
+    #month {
+      border-right: map-get($allDividers, "lineDividers");
+      margin-bottom: map-get($allDividers, "lineDividersMargin");
+    }
+  }
+
+  // day ONLY
+  #weekday {
+    margin-left: map-get($allDividers, "lineDividersMargin");
+  }
 }
 
 /******************************************************************* breakpoints */
@@ -128,7 +142,8 @@ body {
     #time,
     #month,
     #monthDate,
-    #weekday {
+    #weekday,
+    #seconds {
       font-size: 1.9em;
     }
   }
@@ -182,7 +197,8 @@ body {
     #time,
     #month,
     #monthDate,
-    #weekday {
+    #weekday,
+    #seconds {
       font-size: 2.6em;
     }
   }
@@ -226,7 +242,8 @@ body {
     #time,
     #month,
     #monthDate,
-    #weekday {
+    #weekday,
+    #seconds {
       font-size: 3.5em;
     }
   }
@@ -261,7 +278,8 @@ body {
     #time,
     #month,
     #monthDate,
-    #weekday {
+    #weekday,
+    #seconds {
       font-size: 4.9em;
     }
   }
