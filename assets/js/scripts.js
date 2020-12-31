@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "Friday",
     "Saturday",
   ];
-  let emptyDay = document.getElementById("day"); // gets span w/ id="day"
-  let emptyTime = document.getElementById("time"); // gets span w/ id="time"
+  let emptyDay = document.getElementById("weekday"); // gets id="weekday"
+  let emptyTime = document.getElementById("time"); // gets id="time"
 
   /* gets NUMBER for indexing weekday array */
   function getDayIndexNum() {

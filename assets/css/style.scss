@@ -1,13 +1,36 @@
-$bgColour: lightgrey;
 $mainFont: "Roboto Mono", monospace;
+$universalCSS: (
+  "zeroEM": 0em,
+  "borderBox": border-box,
+);
+$allColours: (
+  "bgColour": lightgrey,
+  "containerColour": green,
+  "screenColour": lightgreen,
+);
+$allPadding: (
+  "containerPadding": 5em,
+  "screenPadding": 2em,
+);
 
 * {
-  margin: 0em;
-  padding: 0em;
-  box-sizing: border-box;
+  margin: map-get($universalCSS, "zeroEM");
+  padding: map-get($universalCSS, "zeroEM");
+  box-sizing: map-get($universalCSS, "borderBox");
 }
 
 body {
-  background-color: $bgColour;
+  background-color: map-get($allColours, "bgColour");
   font-family: $mainFont;
+}
+
+#alarmContainer {
+  background-color: map-get($allColours, "containerColour");
+  padding: map-get($allPadding, "containerPadding");
+}
+
+#alarmScreen {
+  background-color: map-get($allColours, "screenColour");
+  padding: map-get($allPadding, "screenPadding");
+  display: grid;
 }
