@@ -8,11 +8,12 @@
 body {
   background-color: lightgrey;
   font-family: "Roboto Mono", monospace;
+  text-align: center;
 }
 
 #alarmContainer {
   background-color: green;
-  padding: 5em;
+  padding: 1em;
 }
 
 #alarmScreen {
@@ -20,5 +21,31 @@ body {
   padding: 2em;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+#innerTopRightHolder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+#leftHolder {
+  border: solid 0.3em blue;
+  margin: auto;
+}
+
+#rightHolder {
+  border-left: orchid solid 0.5em;
+}
+
+#innerTopRightHolder {
+  border-bottom: yellow solid 0.5em;
+}
+
+#month {
+  border-right: solid 0.3em pink;
 }
 /*# sourceMappingURL=style.css.map */

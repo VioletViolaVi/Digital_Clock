@@ -1,4 +1,6 @@
 $mainFont: "Roboto Mono", monospace;
+$centeredText: center;
+
 $universalCSS: (
   "zeroEM": 0em,
   "borderBox": border-box,
@@ -9,8 +11,12 @@ $allColours: (
   "screenColour": lightgreen,
 );
 $allPadding: (
-  "containerPadding": 5em,
+  "containerPadding": 1em,
   "screenPadding": 2em,
+);
+$allGrids: (
+  "gridDisplay": grid,
+  "gridColumns": auto auto,
 );
 
 * {
@@ -22,6 +28,7 @@ $allPadding: (
 body {
   background-color: map-get($allColours, "bgColour");
   font-family: $mainFont;
+  text-align: $centeredText;
 }
 
 #alarmContainer {
@@ -32,5 +39,27 @@ body {
 #alarmScreen {
   background-color: map-get($allColours, "screenColour");
   padding: map-get($allPadding, "screenPadding");
-  display: grid;
+  display: map-get($allGrids, "gridDisplay");
+  grid-template-columns: map-get($allGrids, "gridColumns");
+}
+
+
+
+
+#innerTopRightHolder {
+    display: map-get($allGrids, "gridDisplay");
+    grid-template-columns: map-get($allGrids, "gridColumns");
+}
+#leftHolder {
+  border: solid 0.3em blue;
+  margin: auto;
+}
+#rightHolder {
+  border-left: orchid solid 0.5em;
+}
+#innerTopRightHolder {
+  border-bottom: yellow solid 0.5em;
+}
+#month {
+  border-right: solid 0.3em pink;
 }

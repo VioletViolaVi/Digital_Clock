@@ -1,9 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   let todaysFullDate = new Date(); // gets today's day, date & time
+
   let hours = todaysFullDate.getHours(); // gets num for hours
   let minutes = todaysFullDate.getMinutes(); // gets num for minutes
-  // gets textual day of the week
+
+  let emptyTime = document.getElementById("time"); // gets id="time"
+  let emptyMonth = document.getElementById("month"); // gets id="month"
+  let emptyMonthDate = document.getElementById("monthDate"); // gets id="monthDate"
+  let emptyDay = document.getElementById("weekday"); // gets id="weekday"
+
+  // textual months
+  let monthsOfTheYear = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  // textual days
   let daysOfTheWeek = [
     "Sunday",
     "Monday",
@@ -13,10 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
     "Friday",
     "Saturday",
   ];
-  let emptyDay = document.getElementById("weekday"); // gets id="weekday"
-  let emptyTime = document.getElementById("time"); // gets id="time"
 
-  /* gets NUMBER for indexing weekday array */
+  /* gets NUMBER for INDEXING month array */
+  function getMonthIndexNum() {
+    let monthNumToday = todaysFullDate.getMonth();
+    let monthToday = monthsOfTheYear[monthNumToday];
+    emptyMonth.append(monthToday);
+  }
+  getMonthIndexNum();
+
+  /* gets NUMBER for month date */
+  function getMonthDateNum() {
+    let monthDateNumToday = todaysFullDate.getDate();
+    emptyMonthDate.append(monthDateNumToday);
+  }
+  getMonthDateNum();
+
+  /* gets NUMBER for INDEXING weekday array */
   function getDayIndexNum() {
     let dayNumForToday = todaysFullDate.getDay();
     let today = daysOfTheWeek[dayNumForToday];
@@ -46,36 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
       minutes = "0" + minutes;
     }
   }
-
-  let x = 20;
-  x += 5;
-  console.log(x);
-
-  let y = 10;
-  y %= 3;
-  console.log(y);
-
-  let a;
-  console.log("This is undefined: " + a);
-
-  let favFood = "pizza";
-  let favColour = "pink";
-  let favDrink = "cola";
-  let drinkNum = 5;
-
-  console.log(
-    "I like to eat " +
-      favFood +
-      " and drink " +
-      drinkNum +
-      " bottles of " +
-      favDrink +
-      " whilst wearing a " +
-      favColour +
-      " bib."
-  );
-
-  console.log(
-    `I like to eat ${favFood} and drink ${drinkNum} bottles of ${favDrink} whilst wearing a ${favColour} bib.`
-  );
 });
