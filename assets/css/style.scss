@@ -108,7 +108,7 @@ body {
   margin-left: map-get($allDividers, "lineDividersMargin");
 }
 
-/* bootstrap breakpoints */
+/******************************************************************* breakpoints */
 @media (min-width: map-get($allBreakPoints, "largerMobile")) {
   @mixin title {
     margin-top: 1em;
@@ -155,7 +155,39 @@ body {
   }
 }
 @media (min-width: map-get($allBreakPoints, "tablet")) {
-    
+  @mixin title {
+    margin-top: 0.5em;
+    font-size: 4.5em;
+  }
+
+  @mixin alarmContainer {
+    width: 44em;
+    height: 22em;
+  }
+
+  @mixin alarmScreen {
+    width: 22.6em;
+    height: 11em;
+    #time,
+    #month,
+    #monthDate,
+    #weekday {
+      font-size: 2.7em;
+    }
+  }
+
+  #title {
+    @include title;
+  }
+
+  #alarmContainer {
+    @include alarmContainer;
+  }
+
+  #alarmScreen {
+    @include alarmScreen;
+  }
+
 
 
 
@@ -168,7 +200,30 @@ body {
 
 }
 @media (min-width: map-get($allBreakPoints, "largerTablet")) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
-/* custom breakpoint */
 @media (min-width: map-get($allBreakPoints, "desktop")) {
 }

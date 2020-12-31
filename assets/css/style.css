@@ -71,7 +71,7 @@ body {
   margin-left: 0.1em;
 }
 
-/* bootstrap breakpoints */
+/******************************************************************* breakpoints */
 @media (min-width: 576px) {
   /* month, month date and day */
   #title {
@@ -99,5 +99,24 @@ body {
   }
 }
 
-/* custom breakpoint */
+@media (min-width: 768px) {
+  #title {
+    margin-top: 0.5em;
+    font-size: 4.5em;
+  }
+  #alarmContainer {
+    width: 44em;
+    height: 22em;
+  }
+  #alarmScreen {
+    width: 22.6em;
+    height: 11em;
+  }
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday {
+    font-size: 2.7em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
