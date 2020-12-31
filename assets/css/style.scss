@@ -1,5 +1,13 @@
-*{
-    margin: 0em;
-    padding: 0em;
-    box-sizing: border-box;
+$bgColour: lightgrey;
+$mainFont: "Roboto Mono", monospace;
+
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bgColour;
+  font-family: $mainFont;
 }

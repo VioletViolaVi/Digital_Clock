@@ -4,4 +4,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  background-color: lightgrey;
+  font-family: "Roboto Mono", monospace;
+}
 /*# sourceMappingURL=style.css.map */

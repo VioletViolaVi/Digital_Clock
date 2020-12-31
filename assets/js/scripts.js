@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Write a JavaScript program to display the current day and time.
 
   let todaysFullDate = new Date(); // gets today's day, date & time
   let hours = todaysFullDate.getHours(); // gets num for hours
