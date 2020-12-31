@@ -116,14 +116,15 @@ body {
   }
 
   @mixin alarmContainer {
-    margin: 5em auto 0em;
-    width: 32em;
-    height: 20em;
+    margin: 8em auto 0em;
+    width: 32.7em;
+    height: 14.4em;
   }
 
   @mixin alarmScreen {
-    width: 16.3em;
-    height: 10em;
+    width: 16.7em;
+    height: 7em;
+    padding-right: 1em;
     #time,
     #month,
     #monthDate,
@@ -135,6 +136,11 @@ body {
   /* month, month date and day */
   @mixin rightHolder {
     margin: auto;
+  }
+
+  /* month border */
+  @mixin month {
+    border-right: black solid 0.06em;
   }
 
   #title {
@@ -153,6 +159,11 @@ body {
   #rightHolder {
     @include rightHolder;
   }
+
+  /* month border */
+  #month {
+    @include month;
+  }
 }
 @media (min-width: map-get($allBreakPoints, "tablet")) {
   @mixin title {
@@ -162,18 +173,23 @@ body {
 
   @mixin alarmContainer {
     width: 44em;
-    height: 22em;
+    height: 18em;
   }
 
   @mixin alarmScreen {
     width: 22.6em;
-    height: 11em;
+    height: 9em;
     #time,
     #month,
     #monthDate,
     #weekday {
-      font-size: 2.7em;
+      font-size: 2.6em;
     }
+  }
+
+  /* month border */
+  @mixin month {
+    border-right: black solid 0.05em;
   }
 
   #title {
@@ -188,42 +204,87 @@ body {
     @include alarmScreen;
   }
 
-
-
-
-
-
-
-
-
-
-
+  /* month border */
+  #month {
+    @include month;
+  }
 }
 @media (min-width: map-get($allBreakPoints, "largerTablet")) {
+  @mixin title {
+    font-size: 5.5em;
+  }
 
+  @mixin alarmContainer {
+    width: 59em;
+    height: 25em;
+    margin-top: 2.5em;
+  }
 
+  @mixin alarmScreen {
+    width: 30.6em;
+    height: 12.7em;
+    #time,
+    #month,
+    #monthDate,
+    #weekday {
+      font-size: 3.5em;
+    }
+  }
 
+  #title {
+    @include title;
+  }
 
+  #alarmContainer {
+    @include alarmContainer;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+  #alarmScreen {
+    @include alarmScreen;
+  }
 }
 @media (min-width: map-get($allBreakPoints, "desktop")) {
+  @mixin title {
+    font-size: 6em;
+    margin-top: 0em;
+  }
+
+  @mixin alarmContainer {
+    width: 82em;
+    height: 31.5em;
+    margin-top: 0.5em;
+  }
+
+  @mixin alarmScreen {
+    width: 42.6em;
+    height: 16em;
+    #time,
+    #month,
+    #monthDate,
+    #weekday {
+      font-size: 4.9em;
+    }
+  }
+
+  /* month border */
+  @mixin month {
+    border-right: black solid 0.03em;
+  }
+
+  #title {
+    @include title;
+  }
+
+  #alarmContainer {
+    @include alarmContainer;
+  }
+
+  #alarmScreen {
+    @include alarmScreen;
+  }
+
+  /* month border */
+  #month {
+    @include month;
+  }
 }

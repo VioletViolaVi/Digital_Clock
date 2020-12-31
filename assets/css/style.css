@@ -74,18 +74,20 @@ body {
 /******************************************************************* breakpoints */
 @media (min-width: 576px) {
   /* month, month date and day */
+  /* month border */
   #title {
     margin-top: 1em;
     font-size: 3em;
   }
   #alarmContainer {
-    margin: 5em auto 0em;
-    width: 32em;
-    height: 20em;
+    margin: 8em auto 0em;
+    width: 32.7em;
+    height: 14.4em;
   }
   #alarmScreen {
-    width: 16.3em;
-    height: 10em;
+    width: 16.7em;
+    height: 7em;
+    padding-right: 1em;
   }
   #alarmScreen #time,
   #alarmScreen #month,
@@ -97,26 +99,83 @@ body {
   #rightHolder {
     margin: auto;
   }
+  /* month border */
+  #month {
+    border-right: black solid 0.06em;
+  }
 }
 
 @media (min-width: 768px) {
+  /* month border */
   #title {
     margin-top: 0.5em;
     font-size: 4.5em;
   }
   #alarmContainer {
     width: 44em;
-    height: 22em;
+    height: 18em;
   }
   #alarmScreen {
     width: 22.6em;
-    height: 11em;
+    height: 9em;
   }
   #alarmScreen #time,
   #alarmScreen #month,
   #alarmScreen #monthDate,
   #alarmScreen #weekday {
-    font-size: 2.7em;
+    font-size: 2.6em;
+  }
+  /* month border */
+  #month {
+    border-right: black solid 0.05em;
+  }
+}
+
+@media (min-width: 992px) {
+  #title {
+    font-size: 5.5em;
+  }
+  #alarmContainer {
+    width: 59em;
+    height: 25em;
+    margin-top: 2.5em;
+  }
+  #alarmScreen {
+    width: 30.6em;
+    height: 12.7em;
+  }
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 1366px) {
+  /* month border */
+  #title {
+    font-size: 6em;
+    margin-top: 0em;
+  }
+  #alarmContainer {
+    width: 82em;
+    height: 31.5em;
+    margin-top: 0.5em;
+  }
+  #alarmScreen {
+    width: 42.6em;
+    height: 16em;
+  }
+  #alarmScreen #time,
+  #alarmScreen #month,
+  #alarmScreen #monthDate,
+  #alarmScreen #weekday {
+    font-size: 4.9em;
+  }
+  /* month border */
+  #month {
+    border-right: black solid 0.03em;
   }
 }
 /*# sourceMappingURL=style.css.map */
