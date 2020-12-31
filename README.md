@@ -9,10 +9,15 @@ This project is a 24-hour digital clock that displays the current time when open
 - As a user, I want to be informed on the date, day and time when I approach this website.
 - As a user, I want to get an updated version on the current date, day and time when using this website.
 
-### Designer Stories
+### Designer Goals
 
 - As the designer, I want to ensure the current date, day and time are displayed on the clock so the user can see it as soon as they approach the website.
 - As the designer, I want to ensure the date, day and time update accordingly when the website is refreshed, so the user can be informed with the most accurate information.
+
+### Wireframes
+![Mobile Digital Clock](assets/images/digitalClock-mobile.PNG)
+![Tablet Digital Clock](assets/images/digitalClock-tablet.PNG)
+![Desktop Digital Clock](assets/images/digitalClock-desktop.PNG)
 
 # Features
 
