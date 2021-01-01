@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let hours = todaysFullDate.getHours(); // gets num for hours
   let minutes = todaysFullDate.getMinutes(); // gets num for minutes
   let seconds = todaysFullDate.getSeconds(); // gets num for seconds
+  let monthDateNumToday = todaysFullDate.getDate(); // gets num for month date
 
   // textual months
   let monthsOfTheYear = [
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* gets NUMBER for month date */
   function getMonthDateNum() {
-    let monthDateNumToday = todaysFullDate.getDate();
+    addZeroToSingleMonthDate();
     emptyMonthDate.append(monthDateNumToday);
   }
   getMonthDateNum();
@@ -95,6 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function addZeroToSingleSeconds() {
     if (seconds >= 0 && seconds < 10) {
       seconds = "0" + seconds;
+    }
+  }
+
+  /* adds 0 in front for month date nums 1-9 */
+  function addZeroToSingleMonthDate() {
+    if (monthDateNumToday >= 0 && monthDateNumToday < 10) {
+      monthDateNumToday = "0" + monthDateNumToday;
     }
   }
 });
